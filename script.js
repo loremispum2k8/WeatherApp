@@ -31,6 +31,20 @@ function fillInfo(obj){
     feelsDegrees.textContent = Math.round(obj.days[0].feelslike)
 }
 
+function chooseIcon(obj){
+    switch(obj.days[0].icon){
+        case 'snow': icon.src = 'snow.png'; break;
+        case 'rain': icon.src = 'rain.png'; break;
+        case 'fog': icon.src = 'fog.png'; break;
+        case 'wind': icon.src = 'wind.png'; break;
+        case 'cloudy': icon.src = 'cloudy.png'; break;
+        case 'partly-cloudy-day': icon.src = 'cloudyDay.png'; break;
+        case 'partly-cloudy-night': icon.src = 'cloudyNight.png'; break;
+        case 'clear-day': icon.src = 'clearDay.png'; break;
+        case 'clear-night': icon.src = 'clearNight.png'; break;
+    }
+}
+
 async function displayWeather(){
     try{
         if(!loaded){
@@ -51,7 +65,8 @@ async function displayWeather(){
         let object = await result.json();
         console.log(result.status)
         console.log(object)
-        fillInfo(object)
+        fillInfo(object);
+        chooseIcon(object);
         if(err400.style.display === 'flex'){
             infoContainer.style.display = 'flex'
             err400.style.display = 'none';
@@ -82,6 +97,7 @@ searchButton.addEventListener('click',()=>{
             console.log(result.status)
             console.log(object)
             fillInfo(object)
+            chooseIcon(object);
             if(err400.style.display === 'flex'){
                 infoContainer.style.display = 'flex'
                 err400.style.display = 'none';
