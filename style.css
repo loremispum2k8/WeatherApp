@@ -34,8 +34,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     background-color: #D9D9D9;
-    width: 349px;
+    width: 400px;
     height: 508px;
     gap: 50px;
 }
@@ -54,7 +55,7 @@ body{
     border: 1px solid black;
     font-family: Normal;
 }
-.searcHbutton{
+.searchButton{
     display: flex;
     width: 32px;
     height: 32px;
@@ -66,7 +67,7 @@ body{
     margin-right: 4px;
     cursor: pointer;
 }
-.searcHbutton img{
+.searchButton img{
     width: 16px;
 }
 .infoContainer{
@@ -151,5 +152,27 @@ body{
     font-family: Normal;
 }
 .feelsDegrees{
+    font-family: Medium;
+}
+.err400{
+    width: 300px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 240px;
+    font-size: 24px;
+    font-family: Medium;
+}
+.loading{
+    width: 300px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 240px;
+    font-size: 24px;
     font-family: Medium;
 }
