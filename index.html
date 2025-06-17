@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" refer></script>
+</head>
+<body>
+    <div class="container">
+        <!--Here for style-based programming-->
+        <div class="backgroundImage"></div>
+
+        <!--Here for logic-based programming-->
+        <div class="weatherContainer">
+            <!--Search container-->
+            <div class="searchContainer">
+                <input class="searchInput" type="text" placeholder="City">
+                <div class="searcHbutton">
+                    <img src="search.png" alt="search icon">
+                </div>
+            </div>
+            <!--Search container-->
+            
+            <!--Info container-->
+            <div class="infoContainer">
+                <div class="locationContainer">
+                    <p class="city">Ungheni</p>
+                    <p class="country">Moldova</p>
+                </div>
+
+                <div class="centerContainer">
+                    <p class="centerDegrees">24</p>
+                    <div class="descriptionContainer">
+                        <p class="description">Clear Day</p>
+                        <img class="descriptionIcon" src="clearDay.png" alt="weather icon">
+                    </div>
+                </div>
+
+                <div class="degreesContainer">
+                    <div class="highAndLowContainer">
+                        <div class="arrowDegreesContainer">
+                            <img class="arrow highArrow" src="high.png" alt="High">
+                            <p class="hlDegrees highDegrees">28</p>
+                        </div>
+                        <p class="slash">/</p>
+                        <div class="arrowDegreesContainer">
+                            <img class="arrow lowArrow" src="low.png" alt="Low">
+                            <p class="hlDegrees lowDegrees">14</p>
+                        </div>
+                    </div>
+
+                    <div class="feelsContainer">
+                        <p>Feels <span class="feelsDegrees">28</span></p>
+                    </div>
+                </div>
+            </div>
+            <!--Info container-->
+        </div>
+    </div>
+</body>
+</html>
