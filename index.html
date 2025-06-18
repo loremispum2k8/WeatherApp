@@ -1,66 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!--Here for style-based programming-->
-        <div class="backgroundImage"></div>
+      <!--Here for style-based programming-->
+      <div class="backgroundImage">
+        <img class="bgImage" src="clearDayIMG.jpg" alt="bgImage" />
+      </div>
 
-        <!--Here for logic-based programming-->
-        <div class="weatherContainer">
-            <!--Search container-->
-            <div class="searchContainer">
-                <input class="searchInput" type="text" placeholder="City / Country / Code">
-                <div class="searchButton">
-                    <img src="search.png" alt="search icon">
-                </div>
+      <!--Here for logic-based programming-->
+      <div class="weatherContainer">
+        <!--Search container-->
+        <form class="searchContainer">
+          <input
+            class="searchInput"
+            type="text"
+            placeholder="City / Country / Code"
+            required
+          />
+          <div class="searchButton">
+            <img class="searchIcon" src="search.png" alt="search icon" />
+          </div>
+        </form>
+        <!--Search container-->
+
+        <!--Info container-->
+        <div class="infoContainer">
+          <div class="locationContainer">
+            <p class="city">-</p>
+            <p class="country">-</p>
+          </div>
+
+          <div class="centerContainer">
+            <p class="centerDegrees">-</p>
+            <div class="descriptionContainer">
+              <p class="description">-</p>
+              <img
+                class="descriptionIcon"
+                src="clearDay.png"
+                alt="weather icon"
+              />
             </div>
-            <!--Search container-->
-            
-            <!--Info container-->
-            <div class="infoContainer">
-                <div class="locationContainer">
-                    <p class="city">-</p>
-                    <p class="country">-</p>
-                </div>
+          </div>
 
-                <div class="centerContainer">
-                    <p class="centerDegrees">-</p>
-                    <div class="descriptionContainer">
-                        <p class="description">-</p>
-                        <img class="descriptionIcon" src="clearDay.png" alt="weather icon">
-                    </div>
-                </div>
-
-                <div class="degreesContainer">
-                    <div class="highAndLowContainer">
-                        <div class="arrowDegreesContainer">
-                            <img class="arrow highArrow" src="high.png" alt="High">
-                            <p class="hlDegrees highDegrees">-</p>
-                        </div>
-                        <p class="slash">/</p>
-                        <div class="arrowDegreesContainer">
-                            <img class="arrow lowArrow" src="low.png" alt="Low">
-                            <p class="hlDegrees lowDegrees">-</p>
-                        </div>
-                    </div>
-
-                    <div class="feelsContainer">
-                        <p>Feels <span class="feelsDegrees">-</span></p>
-                    </div>
-                </div>
+          <div class="degreesContainer">
+            <div class="highAndLowContainer">
+              <div class="arrowDegreesContainer">
+                <img class="arrow highArrow" src="high.png" alt="High" />
+                <p class="hlDegrees highDegrees">-</p>
+              </div>
+              <p class="slash">/</p>
+              <div class="arrowDegreesContainer">
+                <img class="arrow lowArrow" src="low.png" alt="Low" />
+                <p class="hlDegrees lowDegrees">-</p>
+              </div>
             </div>
-            <!--Info container-->
 
-            <div class="err400"><p>Location Not Found</p></div>
-            <div class="loading"><p>Loading</p></div>
+            <div class="feelsContainer">
+              <p>Feels <span class="feelsDegrees">-</span></p>
+            </div>
+          </div>
         </div>
+        <!--Info container-->
+
+        <div class="err400">
+          <p>Location Not Found</p>
+          <img class="birdImg" src="bird.png" alt="Not Found" />
+        </div>
+        <div class="loading">
+          <p>Loading</p>
+          <img class="loadingImg" src="loading.png" alt="Loading" />
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
